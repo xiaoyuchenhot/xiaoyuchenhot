@@ -1,13 +1,26 @@
 #!/bin/bash
 # Simple azcopy test script for Azure Blob Storage
-# Prerequisites: azcopy installed, Azure credentials configured
+# Prerequisites: azcopy installed
+#
+# Usage (account-level SAS URL from Azure portal > Storage account > Shared access signature):
+#   SAS_URL="https://<account>.blob.core.windows.net/?sv=..." CONTAINER=mycontainer ./test_azcopy.sh
+#
+# Or set individual vars:
+#   STORAGE_ACCOUNT=myaccount CONTAINER=mycontainer SAS_TOKEN="?sv=..." ./test_azcopy.sh
 
 set -e
 
-# Configuration - set these before running
+# Accept a full Blob service SAS URL and parse account + token from it
+if [ -n "${SAS_URL:-}" ]; then
+    # Extract storage account name from URL: https://<account>.blob.core.windows.net/...
+    STORAGE_ACCOUNT="$(echo "$SAS_URL" | sed 's|https://||;s|\.blob.*||')"
+    # Extract query string (everything from ? onwards)
+    SAS_TOKEN="?$(echo "$SAS_URL" | cut -d'?' -f2-)"
+fi
+
 STORAGE_ACCOUNT="${STORAGE_ACCOUNT:-mystorageaccount}"
 CONTAINER="${CONTAINER:-testcontainer}"
-SAS_TOKEN="${SAS_TOKEN:-}"  # Set via env var or Azure portal > Storage > Shared access signature
+SAS_TOKEN="${SAS_TOKEN:-}"  # must start with '?'
 
 BLOB_URL="https://${STORAGE_ACCOUNT}.blob.core.windows.net/${CONTAINER}"
 
@@ -27,8 +40,12 @@ echo "hello from azcopy test $(date)" > /tmp/azcopy_test.txt
 echo "Created /tmp/azcopy_test.txt"
 echo ""
 
-# 3. Upload the test file
-echo "[3] Uploading test file to blob storage"
+# 3. Ensure container exists, then upload the test file
+echo "[3] Creating container (if not exists)"
+azcopy make "${BLOB_URL}${SAS_TOKEN}" 2>&1 | grep -v "already exists" || true
+echo ""
+
+echo "[3b] Uploading test file to blob storage"
 azcopy copy /tmp/azcopy_test.txt "${BLOB_URL}/azcopy_test.txt${SAS_TOKEN}" --overwrite=true
 echo ""
 
