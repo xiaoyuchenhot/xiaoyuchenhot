@@ -1,0 +1,6 @@
+Hello! This file was added on a feature branch to demonstrate the GitHub workflow.
+
+Steps so far:
+1. Created branch: claude/github-basics-guide-s6GBT
+2. Made a commit: added this file
+3. Next: open a Pull Request to merge this into the main branch
