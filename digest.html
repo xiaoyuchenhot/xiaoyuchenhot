@@ -8,15 +8,15 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #0a0f1e;
-    color: #e2e8f0;
+    background: #f8f9fb;
+    color: #1a202c;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
     min-height: 100vh;
-    padding: 40px 20px 80px;
+    padding: 48px 20px 80px;
     -webkit-font-smoothing: antialiased;
   }
 
-  .page { max-width: 760px; margin: 0 auto; }
+  .page { max-width: 720px; margin: 0 auto; }
 
   /* ── Header ── */
   .header {
@@ -29,79 +29,96 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #f97316;
-    margin-bottom: 14px;
-  }
-  .header h1 {
-    font-size: clamp(32px, 6vw, 52px);
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-    color: #fff;
     margin-bottom: 12px;
   }
-  .header .date {
-    font-size: 14px;
-    color: #64748b;
+  .header h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #111827;
+    margin-bottom: 10px;
   }
-  .header .source a {
+  .header .meta {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+  .header .meta a {
     color: #f97316;
     text-decoration: none;
-    font-size: 13px;
+    font-weight: 500;
   }
 
   /* ── Section ── */
   .section {
-    margin-bottom: 40px;
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.06);
-    background: #111827;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   }
 
   .section-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 18px 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    gap: 10px;
+    padding: 16px 24px;
+    border-bottom: 1px solid #f3f4f6;
   }
-  .section-header .icon { font-size: 22px; line-height: 1; }
+  .section-header .icon { font-size: 18px; }
   .section-header h2 {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
-    color: #94a3b8;
+    color: #6b7280;
   }
 
-  .section-war    .section-header { background: linear-gradient(90deg,rgba(239,68,68,.12),transparent); }
-  .section-rates  .section-header { background: linear-gradient(90deg,rgba(59,130,246,.12),transparent); }
-  .section-property .section-header { background: linear-gradient(90deg,rgba(34,197,94,.12),transparent); }
-  .section-china  .section-header { background: linear-gradient(90deg,rgba(234,179,8,.12),transparent); }
+  .section-war      .section-header { border-left: 3px solid #ef4444; }
+  .section-rates    .section-header { border-left: 3px solid #3b82f6; }
+  .section-property .section-header { border-left: 3px solid #22c55e; }
+  .section-china    .section-header { border-left: 3px solid #f59e0b; }
 
-  /* ── Article card ── */
+  /* ── Article ── */
   .article {
-    padding: 22px 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    transition: background 0.2s;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f3f4f6;
+    transition: background 0.15s;
   }
   .article:last-child { border-bottom: none; }
-  .article:hover { background: rgba(255,255,255,0.03); }
+  .article:hover { background: #fafafa; }
 
+  .article-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
   .article-num {
     font-size: 11px;
     font-weight: 700;
-    color: #374151;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    color: #d1d5db;
   }
 
+  .tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 2px 9px;
+    border-radius: 20px;
+  }
+  .tag-war      { background: #fee2e2; color: #dc2626; }
+  .tag-rates    { background: #dbeafe; color: #2563eb; }
+  .tag-property { background: #dcfce7; color: #16a34a; }
+  .tag-china    { background: #fef3c7; color: #d97706; }
+
   .article h3 {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 650;
-    color: #f1f5f9;
-    line-height: 1.4;
-    margin-bottom: 10px;
+    color: #111827;
+    line-height: 1.45;
+    margin-bottom: 8px;
   }
   .article h3 a {
     color: inherit;
@@ -111,69 +128,51 @@
 
   .article .summary {
     font-size: 14px;
-    color: #94a3b8;
+    color: #6b7280;
     line-height: 1.65;
     margin-bottom: 8px;
   }
 
   .article .why {
     font-size: 13px;
-    color: #64748b;
+    color: #9ca3af;
     line-height: 1.6;
-    padding-left: 12px;
-    border-left: 2px solid #1e293b;
-    margin-bottom: 14px;
+    padding-left: 10px;
+    border-left: 2px solid #e5e7eb;
+    margin-bottom: 12px;
   }
-  .article .why strong { color: #94a3b8; }
+  .article .why strong { color: #6b7280; }
 
   .read-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
     font-size: 12px;
     font-weight: 600;
     color: #f97316;
     text-decoration: none;
-    opacity: 0.85;
-    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.9;
+    transition: opacity 0.15s;
   }
   .read-link:hover { opacity: 1; }
-  .read-link::after { content: "→"; }
-
-  /* ── Tag pills ── */
-  .tag {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  .tag-war      { background: rgba(239,68,68,.15);  color: #f87171; }
-  .tag-rates    { background: rgba(59,130,246,.15); color: #60a5fa; }
-  .tag-property { background: rgba(34,197,94,.15);  color: #4ade80; }
-  .tag-china    { background: rgba(234,179,8,.15);  color: #fbbf24; }
+  .read-link::after { content: " →"; }
 
   /* ── Footer ── */
   .footer {
     text-align: center;
-    margin-top: 48px;
-    padding: 24px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 40px;
     font-size: 12px;
-    color: #374151;
-    line-height: 1.8;
+    color: #9ca3af;
+    line-height: 2;
   }
   .footer a { color: #f97316; text-decoration: none; }
-  .footer .tip {
+  .tip {
     display: inline-block;
     margin-top: 10px;
-    background: rgba(249,115,22,.1);
-    border: 1px solid rgba(249,115,22,.2);
-    color: #fb923c;
-    padding: 8px 18px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #ea580c;
+    padding: 7px 16px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
@@ -185,9 +184,9 @@
 
   <!-- Header -->
   <div class="header">
-    <p class="eyebrow">Your Daily News Briefing</p>
+    <p class="eyebrow">Your Daily Briefing</p>
     <h1>📰 Daily Digest</h1>
-    <p class="date">Tuesday, 8 April 2026 &nbsp;·&nbsp; <span class="source"><a href="https://www.sbs.com.au/news" target="_blank">SBS News</a></span></p>
+    <p class="meta">Tuesday, 8 April 2026 &nbsp;·&nbsp; <a href="https://www.sbs.com.au/news" target="_blank">SBS News</a></p>
   </div>
 
   <!-- WAR & CONFLICT -->
@@ -198,17 +197,15 @@
     </div>
 
     <div class="article">
-      <p class="article-num">01</p>
-      <span class="tag tag-war">Breaking</span>
+      <div class="article-top"><span class="article-num">01</span><span class="tag tag-war">Breaking</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/why-trump-cant-walk-away-from-the-strait-of-hormuz/416rud7df" target="_blank">Why Trump can't walk away from the Strait of Hormuz</a></h3>
-      <p class="summary">Trump's inconsistent messaging on the Strait of Hormuz signals the US has no clear strategy in the escalating Iran conflict, experts warn.</p>
+      <p class="summary">Trump's inconsistent messaging signals the US has no clear strategy in the escalating Iran conflict, experts warn.</p>
       <p class="why"><strong>Why it matters:</strong> The Strait carries 20% of the world's oil — instability there directly pushes up fuel prices across Australia.</p>
       <a class="read-link" href="https://www.sbs.com.au/news/article/why-trump-cant-walk-away-from-the-strait-of-hormuz/416rud7df" target="_blank">Read on SBS</a>
     </div>
 
     <div class="article">
-      <p class="article-num">02</p>
-      <span class="tag tag-war">Middle East</span>
+      <div class="article-top"><span class="article-num">02</span><span class="tag tag-war">Middle East</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/israel-issues-fresh-warning-as-tehran-synagogue-completely-destroyed-by-us-israeli-strikes/5xndiizea" target="_blank">Israel issues fresh warning as Tehran synagogue 'completely destroyed' by US-Israeli strikes</a></h3>
       <p class="summary">US-Israeli airstrikes destroyed a Tehran synagogue; Israel warned Iranian civilians to avoid trains as strikes intensify.</p>
       <p class="why"><strong>Why it matters:</strong> Rapid escalation of the Israel-Iran conflict raises fears of a wider regional war with global consequences.</p>
@@ -216,10 +213,9 @@
     </div>
 
     <div class="article">
-      <p class="article-num">03</p>
-      <span class="tag tag-war">Australia</span>
+      <div class="article-top"><span class="article-num">03</span><span class="tag tag-war">Australia</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/australian-federal-police-arrest-army-reservist-charged-with-fighting-in-ukraine/lzvh635lv" target="_blank">Australian Army reservist charged with joining Ukrainian war effort granted bail</a></h3>
-      <p class="summary">A man allegedly worked as a drone operator in Ukraine from May 2025 before returning to Australia — now facing serious criminal charges.</p>
+      <p class="summary">A man allegedly worked as a drone operator in Ukraine from May 2025 before returning to Australia, now facing serious criminal charges.</p>
       <p class="why"><strong>Why it matters:</strong> A direct legal warning to Australians considering joining foreign conflicts — the consequences are severe.</p>
       <a class="read-link" href="https://www.sbs.com.au/news/article/australian-federal-police-arrest-army-reservist-charged-with-fighting-in-ukraine/lzvh635lv" target="_blank">Read on SBS</a>
     </div>
@@ -233,17 +229,15 @@
     </div>
 
     <div class="article">
-      <p class="article-num">01</p>
-      <span class="tag tag-rates">RBA</span>
+      <div class="article-top"><span class="article-num">01</span><span class="tag tag-rates">RBA</span></div>
       <h3><a href="https://www.sbs.com.au/news/live-blog/rba-march-2026-rates-decision-live/vua12jrsc" target="_blank">RBA hikes rates to 4.10% — governor warns of recession if inflation not curbed</a></h3>
       <p class="summary">The RBA raised the cash rate to 4.10% in March 2026, its first non-unanimous decision in months, with markets pricing in another hike by September.</p>
-      <p class="why"><strong>Why it matters:</strong> A $600K mortgage now costs ~$91 more per month — and another rise could be coming before the year is out.</p>
+      <p class="why"><strong>Why it matters:</strong> A $600K mortgage now costs ~$91 more per month — and another rise could be coming before year end.</p>
       <a class="read-link" href="https://www.sbs.com.au/news/live-blog/rba-march-2026-rates-decision-live/vua12jrsc" target="_blank">Read on SBS</a>
     </div>
 
     <div class="article">
-      <p class="article-num">02</p>
-      <span class="tag tag-rates">Analysis</span>
+      <div class="article-top"><span class="article-num">02</span><span class="tag tag-rates">Analysis</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/reserve-bank-complicated-march-interest-rates-decision/pvgeq2hs6" target="_blank">The RBA faces its 'most complicated' rates call in years</a></h3>
       <p class="summary">The Reserve Bank is weighing stubborn inflation against recession risk, making its next move deeply uncertain for mortgage holders.</p>
       <p class="why"><strong>Why it matters:</strong> If you're on a variable rate, now is the time to compare and consider fixing — more pain may be ahead.</p>
@@ -259,8 +253,7 @@
     </div>
 
     <div class="article">
-      <p class="article-num">01</p>
-      <span class="tag tag-property">Market Outlook</span>
+      <div class="article-top"><span class="article-num">01</span><span class="tag tag-property">Market Outlook</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/2026-australian-property-market-predictions/7zupc0y3o" target="_blank">Where will prices grow the most? 2026 property market predictions</a></h3>
       <p class="summary">Australian house prices are tipped to reach record highs in 2026, with ~5% national growth forecast — down from 8% in 2025 but still climbing.</p>
       <p class="why"><strong>Why it matters:</strong> Prices keep rising despite rate hikes — knowing which cities are hottest shapes buying and selling decisions.</p>
@@ -268,8 +261,7 @@
     </div>
 
     <div class="article">
-      <p class="article-num">02</p>
-      <span class="tag tag-property">Affordability</span>
+      <div class="article-top"><span class="article-num">02</span><span class="tag tag-property">Affordability</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/the-rba-is-expected-to-cut-rates-it-could-stretch-record-high-housing-unaffordability/9s3gzgsp5" target="_blank">Rate cuts could actually worsen record-high housing unaffordability</a></h3>
       <p class="summary">Analysts warn that future rate cuts could push demand and prices higher, squeezing first-home buyers even further out of the market.</p>
       <p class="why"><strong>Why it matters:</strong> Rate relief doesn't equal affordability relief — lower rates tend to fuel price growth, not ease it.</p>
@@ -285,27 +277,26 @@
     </div>
 
     <div class="article">
-      <p class="article-num">01</p>
-      <span class="tag tag-china">Trade War</span>
+      <div class="article-top"><span class="article-num">01</span><span class="tag tag-china">Trade War</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/china-hits-back-at-us-with-125-per-cent-tariffs-says-it-will-ignore-further-hikes/r7j83i4jz" target="_blank">China hits back at US with 125% tariffs, says it will 'ignore' further hikes</a></h3>
       <p class="summary">China retaliated against Trump's latest tariff escalation with 125% levies on US goods, declaring it will ignore any further increases.</p>
-      <p class="why"><strong>Why it matters:</strong> An intensifying US-China trade war disrupts global supply chains and creates both risks and export opportunities for Australia.</p>
+      <p class="why"><strong>Why it matters:</strong> An intensifying US-China trade war creates both risks and export opportunities for Australia's commodity sector.</p>
       <a class="read-link" href="https://www.sbs.com.au/news/article/china-hits-back-at-us-with-125-per-cent-tariffs-says-it-will-ignore-further-hikes/r7j83i4jz" target="_blank">Read on SBS</a>
     </div>
 
     <div class="article">
-      <p class="article-num">02</p>
-      <span class="tag tag-china">Diplomacy</span>
+      <div class="article-top"><span class="article-num">02</span><span class="tag tag-china">Diplomacy</span></div>
       <h3><a href="https://www.sbs.com.au/news/article/as-tariffs-bite-heres-why-chinas-president-xi-jinping-is-touring-asia/7rb2czurr" target="_blank">Why Xi Jinping is touring Southeast Asia amid rising tariff tensions</a></h3>
-      <p class="summary">Xi is shoring up economic alliances across Southeast Asia as China seeks to offset the damage from US tariffs and build new trading partnerships.</p>
-      <p class="why"><strong>Why it matters:</strong> China redirecting its trade network affects demand for Australian commodities — iron ore, agriculture, and energy exports.</p>
+      <p class="summary">Xi is building new economic alliances across Southeast Asia as China seeks to offset the damage from US tariffs.</p>
+      <p class="why"><strong>Why it matters:</strong> China redirecting its trade network affects demand for Australian iron ore, agriculture, and energy exports.</p>
       <a class="read-link" href="https://www.sbs.com.au/news/article/as-tariffs-bite-heres-why-chinas-president-xi-jinping-is-touring-asia/7rb2czurr" target="_blank">Read on SBS</a>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    Curated from <a href="https://www.sbs.com.au/news" target="_blank">SBS News</a> &nbsp;·&nbsp; 8 April 2026<br/>
+    Curated from <a href="https://www.sbs.com.au/news" target="_blank">SBS News</a> &nbsp;·&nbsp; 8 April 2026
+    <br/>
     <span class="tip">💡 Run /daily-digest tomorrow for a fresh update</span>
   </div>
 
