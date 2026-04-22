@@ -12,9 +12,9 @@
     "github": "",
     "website": ""
   },
-  "summary": "Senior technical leader with 18+ years driving complex, customer-facing engineering programs across Microsoft Azure, SAP on Azure, and AI-powered enterprise solutions. Owns end-to-end engagements with strategic customers, leads through influence across engineering, product, and support, and ships AI-assisted operational tooling using Copilot Studio, Azure OpenAI, RAG, and agentic workflows. Comfortable in high-ambiguity environments, autonomous, and grounded in production reliability and customer outcomes.",
+  "summary": "Senior technical program leader with 18+ years owning complex, customer-facing engineering programs across Microsoft Azure, SAP on Azure, and AI-powered enterprise solutions. Defines success metrics, sequences delivery plans, and aligns Engineering, Product, and Support around shared outcomes for the most strategic customers in ANZ. Recent focus: shipping AI-assisted operational tooling (Copilot Studio, Azure OpenAI, RAG, agentic workflows) and governing AI-assisted engineering practices end-to-end — from problem definition through production delivery and adoption — in high-ambiguity, autonomous environments.",
   "skills": {
-    "core": ["Technical Program Management", "Customer Engagement", "Cross-functional Program Leadership", "Cloud Architecture", "AI/ML Solution Delivery", "Incident & Escalation Management"],
+    "core": ["Technical Program Management", "End-to-End Program Delivery", "Cross-functional Engineering Leadership", "Customer Engagement & Stakeholder Influence", "Cloud Architecture", "AI/ML Solution Delivery", "Delivery Plans & Success Metrics"],
     "tools": ["Copilot Studio", "Azure OpenAI Service", "LangChain", "LlamaIndex", "Flowise", "n8n", "MCP", "Semantic Kernel", "Power Automate", "Claude Code", "Cursor"],
     "methods": ["Agentic Workflows", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "RCA & Postmortems", "Service Improvement Programs", "Production Reliability"],
     "domains": ["Microsoft Azure", "SAP on Azure (ECC / S/4HANA)", "Dynamics 365", "Enterprise SaaS", "Mission-Critical Workloads"]
@@ -26,9 +26,9 @@
       "location": "Sydney, Australia",
       "dates": "Sep 2025 – Present",
       "bullets": [
-        "Own end-to-end escalation lifecycle for major customer incidents in the Mission Control Centre, coordinating engineering, support, and leadership to drive resolution within committed SLAs.",
-        "Run customer-facing communication during high-severity outages, keeping enterprise stakeholders aligned across multiple parallel escalations and shifting priorities.",
-        "Partner with technical teams and account leaders to remove roadblocks, broker decisions, and shorten time-to-resolution on complex multi-team incidents."
+        "Own the end-to-end escalation program for major customer incidents in the Mission Control Centre, defining success criteria, sequencing engineering and support workstreams, and driving production resolution within committed SLAs.",
+        "Run the customer-facing communication track during high-severity outages, aligning enterprise stakeholders across multiple parallel programs and shifting priorities.",
+        "Coordinate cross-functional teams and account leaders to remove roadblocks, broker decisions, and shorten time-to-resolution on complex multi-team programs."
       ],
       "links": []
     },
@@ -38,13 +38,13 @@
       "location": "Sydney, Australia",
       "dates": "2021 – Jun 2025",
       "bullets": [
-        "Owned end-to-end customer engagement and escalation management for Woolworths, the largest Azure customer in ANZ, partnering with Engineering, Product, and Support to deliver mission-critical reliability across SAP and Dynamics 365 workloads.",
-        "Acted as incident lead and escalation owner during Sev 1/2 Azure and Dynamics 365 outages, driving RCA, postmortems, and engineering follow-through to close long-term mitigations across cross-functional teams.",
-        "Designed and shipped an AI-assisted Copilot in Copilot Studio for incident triage and enterprise knowledge retrieval, integrating Power Automate, Azure OpenAI, Semantic Kernel, and SAP ECC connectors with Microsoft CSU teams.",
-        "Built RAG knowledge solutions on Azure OpenAI Service and LlamaIndex over operational runbooks and enterprise documentation, accelerating retrieval for support engineers handling complex Azure and SAP issues.",
-        "Orchestrated agentic workflows using LangChain, Flowise, and n8n with MCP and Zapier integrations, automating multi-step operational tasks and guided incident triage for repeatable support scenarios.",
-        "Ran a recurring service improvement program with Woolworths, presenting reliability progress to customer executives and influencing Microsoft product teams to deliver feedback-driven platform changes.",
-        "Provided escalation leadership on SAP-on-Azure workloads for top-tier enterprises (BHP, Rio Tinto, Petronas, Indorama Ventures, T-Systems), partnering with Microsoft architects and SAP PG to land long-term stability fixes."
+        "Owned end-to-end program delivery and escalation management for Woolworths, the largest Azure customer in ANZ, partnering with Engineering, Product, and Support to land mission-critical reliability outcomes across SAP and Dynamics 365 workloads.",
+        "Led the technical program to design and ship an AI-assisted Copilot in Copilot Studio for incident triage and enterprise knowledge retrieval, partnering with Microsoft CSU to integrate Power Automate, Azure OpenAI, Semantic Kernel, and SAP ECC connectors from problem definition through production adoption.",
+        "Defined the delivery plan and validated AI-assisted use cases for a RAG knowledge solution on Azure OpenAI Service and LlamaIndex, accelerating retrieval over operational runbooks for support engineers handling complex Azure and SAP issues.",
+        "Shaped the engineering practice for agentic workflows using LangChain, Flowise, and n8n with MCP and Zapier integrations, governing AI-assisted automation patterns for repeatable operational scenarios.",
+        "Acted as program lead and incident owner during Sev 1/2 Azure and Dynamics 365 outages, driving RCA, postmortems, and engineering follow-through to close long-term mitigations across cross-functional teams.",
+        "Ran a recurring service improvement program with Woolworths, defining success metrics, presenting reliability progress to customer executives, and influencing Microsoft product teams to deliver feedback-driven platform changes.",
+        "Provided program leadership on SAP-on-Azure delivery for top-tier enterprises (BHP, Rio Tinto, Petronas, Indorama Ventures, T-Systems), partnering with Microsoft architects and SAP PG to sequence long-term stability fixes."
       ],
       "links": []
     },
@@ -54,7 +54,7 @@
       "location": "Sydney, Australia",
       "dates": "2019 – 2021",
       "bullets": [
-        "Led test strategy and execution for SAP BOBJ reporting, ECC business processes, and integration scenarios, partnering with developers and business users from requirements through defect closure.",
+        "Led the test program for SAP BOBJ reporting, ECC business processes, and integration scenarios, partnering with developers and business users from requirements through defect closure.",
         "Drove defect triage and root cause analysis across multi-team environments, accelerating SAP releases through structured test reporting and coverage tracking."
       ],
       "links": []
@@ -65,7 +65,7 @@
       "location": "Sydney, Australia",
       "dates": "2017 – 2019",
       "bullets": [
-        "Owned full test lifecycle for SAP BW/BPC, SD/MM, and FI modules, including PI/PO and BRF+ integration testing using QTP, LoadRunner, and Quality Center.",
+        "Owned the end-to-end test delivery program for SAP BW/BPC, SD/MM, and FI modules, including PI/PO and BRF+ integration testing using QTP, LoadRunner, and Quality Center.",
         "Built test plans, traceability matrices, and risk analyses to govern release quality across complex SAP landscapes."
       ],
       "links": []
@@ -86,7 +86,7 @@
       "location": "Sydney, Australia",
       "dates": "2012 – 2016",
       "bullets": [
-        "Led delivery of enterprise SAP Banking and CRM-on-HANA services, providing technical leadership, incident resolution, and change governance across functional and developer teams."
+        "Led the delivery program for enterprise SAP Banking and CRM-on-HANA services, providing technical leadership, incident resolution, and change governance across functional and developer teams."
       ],
       "links": []
     },
@@ -96,7 +96,7 @@
       "location": "Sydney, Australia",
       "dates": "2008 – 2012",
       "bullets": [
-        "Served as SAP MaxAttention single point of contact for Commonwealth Bank, owning critical issue resolution, performance tuning, and architecture reviews across CRM and ECC, escalating to SAP global teams when needed."
+        "Served as SAP MaxAttention single point of contact and delivery lead for Commonwealth Bank, owning critical issue resolution, performance tuning, and architecture reviews across CRM and ECC, sequencing escalations to SAP global teams when needed."
       ],
       "links": []
     },
