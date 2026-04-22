@@ -67,7 +67,7 @@ echo "Creating public IP..."
 az network public-ip create \
   --resource-group "$RESOURCE_GROUP" \
   --name "$PUBLIC_IP_NAME" \
-  --sku Basic \
+  --sku Standard \
   --allocation-method Static \
   --output none
 
