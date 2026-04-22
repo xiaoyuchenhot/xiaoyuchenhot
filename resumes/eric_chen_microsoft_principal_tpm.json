@@ -1,0 +1,132 @@
+{
+  "candidate_level": "senior_ic",
+  "target_role": "Principal Technical Program Manager",
+  "target_company": "Microsoft",
+  "section_order": ["header", "summary", "skills", "experience", "education"],
+  "header": {
+    "name": "Eric Chen",
+    "email": "sapetech@hotmail.com",
+    "phone": "0414 621 509",
+    "location": "Sydney, Australia",
+    "linkedin": "",
+    "github": "",
+    "website": ""
+  },
+  "summary": "Senior technical leader with 18+ years driving complex, customer-facing engineering programs across Microsoft Azure, SAP on Azure, and AI-powered enterprise solutions. Owns end-to-end engagements with strategic customers, leads through influence across engineering, product, and support, and ships AI-assisted operational tooling using Copilot Studio, Azure OpenAI, RAG, and agentic workflows. Comfortable in high-ambiguity environments, autonomous, and grounded in production reliability and customer outcomes.",
+  "skills": {
+    "core": ["Technical Program Management", "Customer Engagement", "Cross-functional Program Leadership", "Cloud Architecture", "AI/ML Solution Delivery", "Incident & Escalation Management"],
+    "tools": ["Copilot Studio", "Azure OpenAI Service", "LangChain", "LlamaIndex", "Flowise", "n8n", "MCP", "Semantic Kernel", "Power Automate", "Claude Code", "Cursor"],
+    "methods": ["Agentic Workflows", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "RCA & Postmortems", "Service Improvement Programs", "Production Reliability"],
+    "domains": ["Microsoft Azure", "SAP on Azure (ECC / S/4HANA)", "Dynamics 365", "Enterprise SaaS", "Mission-Critical Workloads"]
+  },
+  "experience": [
+    {
+      "title": "Lead Customer Advocate",
+      "company": "OpenText",
+      "location": "Sydney, Australia",
+      "dates": "Sep 2025 – Present",
+      "bullets": [
+        "Own end-to-end escalation lifecycle for major customer incidents in the Mission Control Centre, coordinating engineering, support, and leadership to drive resolution within committed SLAs.",
+        "Run customer-facing communication during high-severity outages, keeping enterprise stakeholders aligned across multiple parallel escalations and shifting priorities.",
+        "Partner with technical teams and account leaders to remove roadblocks, broker decisions, and shorten time-to-resolution on complex multi-team incidents."
+      ],
+      "links": []
+    },
+    {
+      "title": "Senior Customer Reliability Engineer",
+      "company": "Microsoft Australia",
+      "location": "Sydney, Australia",
+      "dates": "2021 – Jun 2025",
+      "bullets": [
+        "Owned end-to-end customer engagement and escalation management for Woolworths, the largest Azure customer in ANZ, partnering with Engineering, Product, and Support to deliver mission-critical reliability across SAP and Dynamics 365 workloads.",
+        "Acted as incident lead and escalation owner during Sev 1/2 Azure and Dynamics 365 outages, driving RCA, postmortems, and engineering follow-through to close long-term mitigations across cross-functional teams.",
+        "Designed and shipped an AI-assisted Copilot in Copilot Studio for incident triage and enterprise knowledge retrieval, integrating Power Automate, Azure OpenAI, Semantic Kernel, and SAP ECC connectors with Microsoft CSU teams.",
+        "Built RAG knowledge solutions on Azure OpenAI Service and LlamaIndex over operational runbooks and enterprise documentation, accelerating retrieval for support engineers handling complex Azure and SAP issues.",
+        "Orchestrated agentic workflows using LangChain, Flowise, and n8n with MCP and Zapier integrations, automating multi-step operational tasks and guided incident triage for repeatable support scenarios.",
+        "Ran a recurring service improvement program with Woolworths, presenting reliability progress to customer executives and influencing Microsoft product teams to deliver feedback-driven platform changes.",
+        "Provided escalation leadership on SAP-on-Azure workloads for top-tier enterprises (BHP, Rio Tinto, Petronas, Indorama Ventures, T-Systems), partnering with Microsoft architects and SAP PG to land long-term stability fixes."
+      ],
+      "links": []
+    },
+    {
+      "title": "Senior SAP Test Analyst",
+      "company": "Harvey Norman",
+      "location": "Sydney, Australia",
+      "dates": "2019 – 2021",
+      "bullets": [
+        "Led test strategy and execution for SAP BOBJ reporting, ECC business processes, and integration scenarios, partnering with developers and business users from requirements through defect closure.",
+        "Drove defect triage and root cause analysis across multi-team environments, accelerating SAP releases through structured test reporting and coverage tracking."
+      ],
+      "links": []
+    },
+    {
+      "title": "SAP Test Analyst (Contractor)",
+      "company": "GrainCorp",
+      "location": "Sydney, Australia",
+      "dates": "2017 – 2019",
+      "bullets": [
+        "Owned full test lifecycle for SAP BW/BPC, SD/MM, and FI modules, including PI/PO and BRF+ integration testing using QTP, LoadRunner, and Quality Center.",
+        "Built test plans, traceability matrices, and risk analyses to govern release quality across complex SAP landscapes."
+      ],
+      "links": []
+    },
+    {
+      "title": "SAP UI5 Consultant (Contractor)",
+      "company": "Department of Human Services",
+      "location": "Australia",
+      "dates": "2016 – 2017",
+      "bullets": [
+        "Rebuilt CRM WebUI applications and extended the DHS UI5 framework, integrating OData services with SAP Fiori apps and configuring the Fiori launchpad for enterprise rollout."
+      ],
+      "links": []
+    },
+    {
+      "title": "SAP Service Manager",
+      "company": "Commonwealth Bank",
+      "location": "Sydney, Australia",
+      "dates": "2012 – 2016",
+      "bullets": [
+        "Led delivery of enterprise SAP Banking and CRM-on-HANA services, providing technical leadership, incident resolution, and change governance across functional and developer teams."
+      ],
+      "links": []
+    },
+    {
+      "title": "CRM / Banking Consultant",
+      "company": "SAP Australia",
+      "location": "Sydney, Australia",
+      "dates": "2008 – 2012",
+      "bullets": [
+        "Served as SAP MaxAttention single point of contact for Commonwealth Bank, owning critical issue resolution, performance tuning, and architecture reviews across CRM and ECC, escalating to SAP global teams when needed."
+      ],
+      "links": []
+    },
+    {
+      "title": "Support Consultant (Germany Rotation)",
+      "company": "SAP China",
+      "location": "China / Germany",
+      "dates": "2006 – 2008",
+      "bullets": [
+        "Delivered global remote support for SAP CRM and ECC across EMEA, APAC, and North America, resolving critical performance, integration, and upgrade issues for international enterprise clients."
+      ],
+      "links": []
+    }
+  ],
+  "projects": [],
+  "education": [
+    {
+      "school": "University of Newcastle",
+      "location": "Australia",
+      "dates": "",
+      "degree": "Master of Information Technology (Software Engineering)",
+      "details": []
+    }
+  ],
+  "certifications": [],
+  "awards": [],
+  "metadata": {
+    "page_target": "two_page",
+    "tone": "modern_professional",
+    "ats_focus": true,
+    "humanization_pass_complete": true
+  }
+}
