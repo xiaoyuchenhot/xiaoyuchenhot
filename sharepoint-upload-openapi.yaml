@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: SharePoint File Upload
+  description: Upload a file to a SharePoint folder via Microsoft Graph API
+  version: 1.0.0
+servers:
+  - url: https://graph.microsoft.com/v1.0
+paths:
+  /sites/{siteId}/drive/root:/{folderPath}/{fileName}:/content:
+    put:
+      operationId: uploadFile
+      summary: Upload a file to SharePoint
+      parameters:
+        - name: siteId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: SharePoint site ID
+        - name: folderPath
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Folder path relative to document library root
+        - name: fileName
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Target filename with extension
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  webUrl:
+                    type: string
+        '201':
+          description: File created successfully
+      security:
+        - oauth2: []
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token
+          scopes:
+            https://graph.microsoft.com/.default: Access Microsoft Graph
