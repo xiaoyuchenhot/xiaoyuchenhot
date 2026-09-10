@@ -1,0 +1,87 @@
+openapi: 3.0.3
+info:
+  title: Core Content Upload Document
+  description: Upload a document to OpenText Content Server via REST API
+  version: 1.0.0
+servers:
+  - url: https://intranet.opentext.com/intranet
+paths:
+  /api/v1/nodes:
+    post:
+      operationId: uploadDocument
+      summary: Upload a document to a Content Server folder
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - type
+                - parent_id
+                - name
+                - file
+              properties:
+                type:
+                  type: integer
+                  description: Node type (144 = Document)
+                  example: 144
+                parent_id:
+                  type: integer
+                  description: Parent folder Node ID
+                  example: 288279316
+                name:
+                  type: string
+                  description: Document name
+                  example: EscalationReport_2026-09-10.txt
+                file:
+                  type: string
+                  format: binary
+                  description: File content to upload
+      responses:
+        '200':
+          description: Document created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '201':
+          description: Document created successfully
+      security:
+        - otcsticket: []
+  /api/v1/auth:
+    post:
+      operationId: authenticate
+      summary: Authenticate and get OTCSTicket
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ticket:
+                    type: string
+                    description: OTCSTicket for subsequent API calls
+components:
+  securitySchemes:
+    otcsticket:
+      type: apiKey
+      in: header
+      name: OTCSTicket
+      description: Content Server authentication ticket
