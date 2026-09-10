@@ -1,0 +1,52 @@
+openapi: 3.0.3
+info:
+  title: Core Share Upload File
+  description: Upload a file to OpenText Core Share folder
+  version: 1.0.0
+servers:
+  - url: https://core.opentext.com/api
+paths:
+  /v1/files:
+    post:
+      operationId: uploadFile
+      summary: Upload a file to a Core Share folder
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - parent_id
+                - name
+                - file
+              properties:
+                parent_id:
+                  type: string
+                  description: Parent folder ID
+                  example: "321813821469491215"
+                name:
+                  type: string
+                  description: File name with extension
+                  example: EscalationReport_2026-09-10.txt
+                file:
+                  type: string
+                  format: binary
+                  description: File content to upload
+      responses:
+        '200':
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+        '201':
+          description: File created successfully
+      security:
+        - bearer: []
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      description: Core Share Bearer token or OAuth2 access token
