@@ -1,15 +1,16 @@
 openapi: 3.0.3
 info:
-  title: Core Share Upload File
-  description: Upload a file to OpenText Core Share folder
+  title: OpenText Core Document Upload
   version: 1.0.0
 servers:
-  - url: https://core.opentext.com/api
+  - url: https://core.opentext.com
 paths:
-  /v1/files:
+  /api/v3/documents?collisionStrategy=overwrite:
     post:
-      operationId: uploadFile
-      summary: Upload a file to a Core Share folder
+      operationId: uploadDocument
+      summary: Upload a document to a folder
+      security:
+        - bearerAuth: []
       requestBody:
         required: true
         content:
@@ -17,36 +18,28 @@ paths:
             schema:
               type: object
               required:
-                - parent_id
-                - name
+                - parentId
                 - file
               properties:
-                parent_id:
+                parentId:
                   type: string
-                  description: Parent folder ID
-                  example: "321813821469491215"
-                name:
-                  type: string
-                  description: File name with extension
-                  example: EscalationReport_2026-09-10.txt
+                  description: Destination folder ID
                 file:
                   type: string
                   format: binary
-                  description: File content to upload
+                  description: File to upload
       responses:
         '200':
-          description: File uploaded successfully
-          content:
-            application/json:
-              schema:
-                type: object
-        '201':
-          description: File created successfully
-      security:
-        - bearer: []
+          description: Document uploaded successfully
+        '400':
+          description: Invalid request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Folder not found
 components:
   securitySchemes:
-    bearer:
+    bearerAuth:
       type: http
       scheme: bearer
-      description: Core Share Bearer token or OAuth2 access token
+      bearerFormat: JWT
